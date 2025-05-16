@@ -103,7 +103,7 @@ c does, however, have the concept of [pointers <img src="resources/link.png" wid
 
 ```c
 int x = 0;         // create a local int variable x
-int* y = 0;        // create a pointer from x
+int *y = 0;        // create a pointer from x
 *y = 1;            // set the referenced value of y to 1
 (*y)++;            // increment the referenced value of y
 printf("%d\n", x)  // print the value of x, which at this point is 2
@@ -118,7 +118,7 @@ the text section (`.text`, or the [code segment <img src="resources/link.png" wi
 c provides reasonably simple interfaces for memory management in [`stdlib.h` <img src="resources/link.png" width="12" height="12">](https://man7.org/linux/man-pages/man0/stdlib.h.0p.html): [malloc <img src="resources/link.png" width="12" height="12">](https://man7.org/linux/man-pages/man3/malloc.3.html) and [free  <img src="resources/link.png" width="12" height="12">](https://man7.org/linux/man-pages/man1/free.1.html). `malloc` reserves the specified number of bytes on the heap and returns a pointer to it, and `free` will return that memory to the heap. keep in mind that old memory may be reused and that memory is not implicitly reset. example usage shown below:
 
 ```c
-int* arr = (int*) malloc(512 * sizeof(int)) // allocate a 500 x 4 byte memory block, or a 500-length integer array
+int *arr = (int *) malloc(512 * sizeof(int)) // allocate a 500 x 4 byte memory block, or a 500-length integer array
 for (int i = 0; i < 500; ++i) {
     arr[i] = 2 * i;                         // assign each index of the array with its index times 2
 }
