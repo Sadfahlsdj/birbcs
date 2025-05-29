@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#define ARRAY_LENGTH 100000
+#define ARRAY_LENGTH 10000000
 
 int *generate_array(int len);
 
