@@ -37,7 +37,6 @@ int main() {
         if (start != NULL) { // in case a word ends the line
             rev(start, &buf[len-1]);
         }
-        // printf("%s", buf);
         fprintf(out, "%s", buf);
     }
     fclose(in);
